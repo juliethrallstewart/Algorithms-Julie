@@ -18,21 +18,19 @@ def find_max_profit(prices):
           remove_biggest_index = copy_prices.remove(value_biggest_stock)
           second_biggest_stock = max(copy_prices)
           index_second_biggest_stock = prices.index(second_biggest_stock)
-          print(second_biggest_stock)
-          print(copy_prices)
+          # print(second_biggest_stock)
+          # print(copy_prices)
           
           price_selection = copy_prices[:index_second_biggest_stock + 1]
           price_selection_two = prices[:index_second_biggest_stock + 1]
-          print(price_selection, "this is price selection")
-          print(price_selection_two, "this is price selection alt")
+          # print(price_selection, "this is price selection")
+          # print(price_selection_two, "this is price selection alt")
           if len(price_selection_two) == 2:
             price_max = max(price_selection_two)
             price_min = min(price_selection_two)
             profit = price_min - price_max
             return profit
           else:
-          #remove any prices after the biggest stock
-
           #get compare and return profit
               cur_min_price = min(price_selection)
               cur_max_profit = 0
@@ -45,7 +43,7 @@ def find_max_profit(prices):
         else:
           biggest_stock_index = prices.index(biggest_stock)
           price_selection = prices[:biggest_stock_index + 1]
-          # print(price_selection)
+  
           #remove any prices after the biggest stock
 
           #get compare and return profit
